@@ -12,7 +12,7 @@ describe "Not having any errors and being all green" do
     it 'raises a SyntaxError for nonsensical code' do
       expect{
         load './lib/a_syntax_error.rb'
-      }.raise_error(SyntaxError)
+      }.to raise_error(SyntaxError)
     end
   end
 
@@ -28,7 +28,7 @@ describe "Not having any errors and being all green" do
     it 'raises a ZeroDivisionError for dividing by zero' do
       expect{
         load './lib/a_division_by_zero_error.rb'
-      }.to_raise_error(ZeroDivisionError)
+      }.to raise_error(ZeroDivisionError)
     end
   end
 end
